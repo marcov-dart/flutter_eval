@@ -886,7 +886,7 @@ class $CupertinoDynamicColor implements $Instance {
     List<$Value?> args,
   ) {
     final self = target as $CupertinoDynamicColor;
-    final result = self.$value.withOpacity(args[0]!.$value);
+    final result = self.$value.withValues(alpha: args[0]!.$value);
     return $Color.wrap(result);
   }
 
