@@ -267,7 +267,13 @@ class $EdgeInsets implements EdgeInsets, $Instance {
   Rect deflateRect(Rect rect) => $value.deflateRect(rect);
 
   @override
+  RRect deflateRRect(RRect rect) => $value.deflateRRect(rect);
+
+  @override
   Rect inflateRect(Rect rect) => $value.inflateRect(rect);
+
+  @override
+  RRect inflateRRect(RRect rect) => $value.inflateRRect(rect);
 
   @override
   double get left => $value.left;
