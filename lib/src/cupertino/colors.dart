@@ -725,28 +725,28 @@ class $CupertinoDynamicColor implements $Instance {
         return $Color.wrap(_darkHighContrastElevatedColor);
 
       case 'value':
-        final _value = $value.value;
+        final _value = $value.toARGB32();
         return $int(_value);
 
       case 'alpha':
-        final _alpha = $value.alpha;
+        final _alpha = ($value.a * 255.0).round().clamp(0, 255);
         return $int(_alpha);
 
-      case 'blue':
-        final _blue = $value.blue;
-        return $int(_blue);
+      case 'red':
+        final _red = ($value.r * 255.0).round().clamp(0, 255);
+        return $int(_red);
 
       case 'green':
-        final _green = $value.green;
+        final _green = ($value.g * 255.0).round().clamp(0, 255);
         return $int(_green);
 
-      case 'opacity':
-        final _opacity = $value.opacity;
-        return $double(_opacity);
+      case 'blue':
+        final _blue = ($value.b * 255.0).round().clamp(0, 255);
+        return $int(_blue);
 
-      case 'red':
-        final _red = $value.red;
-        return $int(_red);
+      case 'opacity':
+        final _opacity = $value.a;
+        return $double(_opacity);
 
       case 'a':
         final _a = $value.a;
